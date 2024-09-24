@@ -7,6 +7,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Date;
 
 
@@ -18,9 +19,9 @@ public class BaseEntity implements Serializable {
     private Integer id;
 
     @CreatedDate
-    private Date createAt;
+    private Instant createAt;
 
 
     @LastModifiedDate
-    private  Date updatedAt;
+    private  Instant updatedAt;
 }

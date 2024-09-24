@@ -16,4 +16,7 @@ public class LigneVente extends BaseEntity{
 
     @Column
     private BigDecimal quantite;
+
+    @Column(name = "prix_unitaire")
+    private  BigDecimal prixUnitaire;
 }

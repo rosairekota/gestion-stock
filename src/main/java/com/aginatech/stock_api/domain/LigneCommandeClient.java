@@ -1,10 +1,9 @@
 package com.aginatech.stock_api.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.math.BigDecimal;
 
 @Data
 @Entity
@@ -19,4 +18,10 @@ public class LigneCommandeClient extends BaseEntity{
     @ManyToOne
     @JoinColumn(name = "commande_client_id")
     private CommandeClient commandeClient;
+
+    @Column
+    private BigDecimal quantite;
+
+    @Column(name = "prix_unitaire")
+    private BigDecimal prixUnitaire;
 }

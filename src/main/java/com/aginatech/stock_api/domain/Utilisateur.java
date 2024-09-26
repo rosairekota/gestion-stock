@@ -1,15 +1,13 @@
 package com.aginatech.stock_api.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.Instant;
 import java.util.List;
 
 @Data
+@Builder
 @Entity
 @Table(name = "utilisateurs")
 public class Utilisateur  extends BaseEntity{
@@ -43,6 +41,6 @@ public class Utilisateur  extends BaseEntity{
     @JoinColumn(name = "entreprise_id")
     private  Entreprise entreprise;
 
-    @ManyToMany(mappedBy = "utilisateurs")
+    @OneToMany(mappedBy = "utilisateur")
     private List<Role> roles;
 }

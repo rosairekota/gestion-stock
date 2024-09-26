@@ -2,6 +2,7 @@ package com.aginatech.stock_api.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -13,6 +14,7 @@ import java.util.Date;
 
 
 @Data
+@Builder
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 /*AuditingEntityListener: Permet d'assigner automatiquement

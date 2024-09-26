@@ -1,11 +1,13 @@
 package com.aginatech.stock_api.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
 @Data
+@Builder
 @Entity
 @Table(name = "article")
 public class Article extends  BaseEntity {

@@ -2,6 +2,7 @@ package com.aginatech.stock_api.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.time.Instant;
 import java.util.List;
 
 @Data
+@Builder
 @Entity
 @Table(name = "commande_fournisseur")
 public class CommandeFournisseur extends BaseEntity{

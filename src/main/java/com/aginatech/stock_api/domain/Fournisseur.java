@@ -1,11 +1,13 @@
 package com.aginatech.stock_api.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
+@Builder
 @Entity
 @Table(name = "fournisseur")
 public class Fournisseur extends BaseEntity {

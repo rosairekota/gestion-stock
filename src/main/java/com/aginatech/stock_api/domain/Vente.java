@@ -4,12 +4,14 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.Instant;
 import java.util.List;
 
 @Data
+@Builder
 @Entity
 @Table(name = "ventes")
 public class Vente  extends BaseEntity{

@@ -1,12 +1,11 @@
 package com.aginatech.stock_api.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 @Entity
 @Table(name = "roles")
 public class Role extends BaseEntity{
@@ -17,6 +16,7 @@ public class Role extends BaseEntity{
     @Column
     private  String slug;
 
-    @ManyToMany(mappedBy = "roles")
-    private  Utilisateur utilisateurs;
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_id")
+    private  Utilisateur utilisateur;
 }

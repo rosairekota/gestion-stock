@@ -1,12 +1,14 @@
 package com.aginatech.stock_api.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.Instant;
 import java.util.List;
 
 @Data
+@Builder
 @Entity
 @Table(name = "commande_client")
 public class CommandeClient  extends  BaseEntity{
